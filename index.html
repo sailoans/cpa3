@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: /
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Redirect</title>
+    <script>
+        function redirectToCountry() {
+            var country = document.getElementById("country").innerText.trim();
+
+            // Define the redirection URLs for different countries
+            var redirections = {
+                "LK": "https://singingfiles.com/show.php?l=0&u=8436&id=54770", // Sri Lanka
+                "JM": "https://singingfiles.com/show.php?l=0&u=8436&id=54622", // Jamaica
+                "IN": "https://www.facebook.com", // India
+            };
+
+            // Redirect the user based on their country
+            if (redirections[country]) {
+                window.location.href = redirections[country];
+            } else {
+                window.location.href = "https://www.google.com"; // Fallback
+            }
+        }
+
+        // Call the redirection function when the page loads
+        window.onload = redirectToCountry;
+    </script>
+</head>
+<body>
+    <p id="country">IN</p>
+</body>
+</html>
