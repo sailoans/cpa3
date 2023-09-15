@@ -96,138 +96,62 @@
         <a href="https://singingfiles.com/show.php?l=0&u=8436&id=54771" class="link-button">Get Started</a>
 
         <!-- Comments Section -->
-        <div class="comments">
-            <!-- Comment 1 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile1.jpg" alt="User 1">
-                    <p><strong>Ranil Perera:</strong> Great opportunity!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 2 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile2.jpg" alt="User 2">
-                    <p><strong>Chamari Silva:</strong> I can't believe it's real!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-            
-            <!-- Add more comments as needed -->
-            <!-- Comment 3 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile3.jpg" alt="User 3">
-                    <p><strong>Samantha Fernando:</strong> This changed my life!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 4 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile4.jpg" alt="User 4">
-                    <p><strong>Malik Ranaweera:</strong> Amazing opportunity!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 5 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile5.jpg" alt="User 5">
-                    <p><strong>Ayesha Jayasuriya:</strong> I'm loving this!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 6 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile6.jpg" alt="User 6">
-                    <p><strong>Ruwan Bandara:</strong> It's a game-changer!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 7 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile7.jpg" alt="User 7">
-                    <p><strong>Nadeesha Gunawardana:</strong> Unbelievable!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 8 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile8.jpg" alt="User 8">
-                    <p><strong>Tharindu Rajapakse:</strong> I'm in!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 9 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile9.jpg" alt="User 9">
-                    <p><strong>Isuru Perera:</strong> Life-changing opportunity!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
-
-            <!-- Comment 10 -->
-            <div class="comment">
-                <div class="user-info">
-                    <img src="profile10.jpg" alt="User 10">
-                    <p><strong>Kavindu Wijesekara:</strong> Best thing ever!</p>
-                </div>
-                <div class="buttons">
-                    <button class="like-button">Like</button>
-                    <button class="comment-button">Comment</button>
-                    <button class="share-button">Share</button>
-                </div>
-            </div>
+        <div class="comments" id="comments-container">
+            <!-- JavaScript will generate and add 5 comments here -->
         </div>
     </div>
+
+    <script>
+        // Function to generate a random name
+        function generateRandomName() {
+            const names = ["John Doe", "Jane Smith", "David Johnson", "Emily Wilson", "Michael Brown"];
+            const randomIndex = Math.floor(Math.random() * names.length);
+            return names[randomIndex];
+        }
+
+        // Function to generate a random comment
+        function generateRandomComment() {
+            const comments = [
+                "Great opportunity!",
+                "I can't believe it's real!",
+                "This changed my life!",
+                "Amazing opportunity!",
+                "I'm loving this!",
+                "It's a game-changer!",
+                "Unbelievable!",
+                "I'm in!",
+                "Life-changing opportunity!",
+                "Best thing ever!"
+            ];
+            const randomIndex = Math.floor(Math.random() * comments.length);
+            return comments[randomIndex];
+        }
+
+        // Function to generate and display 5 random comments
+        function generateComments() {
+            const commentsContainer = document.getElementById("comments-container");
+            for (let i = 0; i < 5; i++) {
+                const randomName = generateRandomName();
+                const randomComment = generateRandomComment();
+                const commentElement = document.createElement("div");
+                commentElement.className = "comment";
+                commentElement.innerHTML = `
+                    <div class="user-info">
+                        <img src="profile${i + 1}.jpg" alt="${randomName}">
+                        <p><strong>${randomName}:</strong> ${randomComment}</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="like-button">Like</button>
+                        <button class="comment-button">Comment</button>
+                        <button class="share-button">Share</button>
+                    </div>
+                `;
+                commentsContainer.appendChild(commentElement);
+            }
+        }
+
+        // Generate and display 5 random comments when the page loads
+        generateComments();
+    </script>
 </body>
 </html>
