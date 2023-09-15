@@ -1,35 +1,233 @@
----
-layout: default
-permalink: /
----
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Country Redirect</title>
-    <script>
-        function redirectToCountry() {
-            var country = document.getElementById("country").innerText.trim();
-
-            // Define the redirection URLs for different countries
-            var redirections = {
-                "LK": "https://singingfiles.com/show.php?l=0&u=8436&id=54770", // Sri Lanka
-                "JM": "https://singingfiles.com/show.php?l=0&u=8436&id=54622", // Jamaica
-                "IN": "https://www.facebook.com", // India
-            };
-
-            // Redirect the user based on their country
-            if (redirections[country]) {
-                window.location.href = redirections[country];
-            } else {
-                window.location.href = "https://www.google.com"; // Fallback
-            }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Millionaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        // Call the redirection function when the page loads
-        window.onload = redirectToCountry;
-    </script>
+        .container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .heading {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+        .comments {
+            text-align: left;
+            margin-top: 30px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .comment .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .comment .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .comment .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .comment .like-button,
+        .comment .comment-button,
+        .comment .share-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .comment .like-button {
+            color: #007bff;
+        }
+        .comment .comment-button {
+            color: #ff6600;
+        }
+        .comment .share-button {
+            color: #33cc33;
+        }
+    </style>
 </head>
 <body>
-    <p id="country">IN</p>
+    <div class="container">
+        <h1 class="heading">Become a Millionaire</h1>
+        <p>Click the button below to access the opportunity:</p>
+        <a href="https://singingfiles.com/show.php?l=0&u=8436&id=54771" class="link-button">Get Started</a>
+
+        <!-- Comments Section -->
+        <div class="comments">
+            <!-- Comment 1 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile1.jpg" alt="User 1">
+                    <p><strong>Ranil Perera:</strong> Great opportunity!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile2.jpg" alt="User 2">
+                    <p><strong>Chamari Silva:</strong> I can't believe it's real!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+            
+            <!-- Add more comments as needed -->
+            <!-- Comment 3 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile3.jpg" alt="User 3">
+                    <p><strong>Samantha Fernando:</strong> This changed my life!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 4 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile4.jpg" alt="User 4">
+                    <p><strong>Malik Ranaweera:</strong> Amazing opportunity!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 5 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile5.jpg" alt="User 5">
+                    <p><strong>Ayesha Jayasuriya:</strong> I'm loving this!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 6 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile6.jpg" alt="User 6">
+                    <p><strong>Ruwan Bandara:</strong> It's a game-changer!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 7 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile7.jpg" alt="User 7">
+                    <p><strong>Nadeesha Gunawardana:</strong> Unbelievable!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 8 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile8.jpg" alt="User 8">
+                    <p><strong>Tharindu Rajapakse:</strong> I'm in!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 9 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile9.jpg" alt="User 9">
+                    <p><strong>Isuru Perera:</strong> Life-changing opportunity!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+
+            <!-- Comment 10 -->
+            <div class="comment">
+                <div class="user-info">
+                    <img src="profile10.jpg" alt="User 10">
+                    <p><strong>Kavindu Wijesekara:</strong> Best thing ever!</p>
+                </div>
+                <div class="buttons">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                    <button class="share-button">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
